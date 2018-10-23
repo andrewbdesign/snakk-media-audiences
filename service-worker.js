@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/snakk-media-specs/precache-manifest.c623ce4cf559ed477791511b7029f923.js"
+  "/snakk-media-audiences/precache-manifest.11352a864dc6eb8a5d8e7dfe34cd479c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/snakk-media-specs/index.html", {
+workbox.routing.registerNavigationRoute("/snakk-media-audiences/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
