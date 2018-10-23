@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/snakk-media-audiences/precache-manifest.11352a864dc6eb8a5d8e7dfe34cd479c.js"
+  "/snakk-media-audiences/precache-manifest.5a48396c83236d2f9eb30f9ef1f55ad4.js"
 );
 
 workbox.clientsClaim();

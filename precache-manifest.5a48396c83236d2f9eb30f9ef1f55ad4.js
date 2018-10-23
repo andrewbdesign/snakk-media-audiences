@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/snakk-media-audiences/static/css/1.c569e928.chunk.css"
   },
   {
-    "revision": "ce5aadcf29eb35433a5f54b67b0fb414",
+    "revision": "b8f6fabb0a3dc27ffd47c25900286018",
     "url": "/snakk-media-audiences/index.html"
   }
 ];
