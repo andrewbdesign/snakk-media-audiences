@@ -2,7 +2,7 @@
   "name": "media-specs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andrewbdesign.github.io/snakk-media-specs",
+  "homepage": "https://andrewbdesign.github.io/snakk-media-audiences",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.9.4",
@@ -13,7 +13,7 @@
     "react-scripts": "2.0.5"
   },
   "scripts": {
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -4,13 +4,17 @@ const Search = ({searchChange, inputValue}) => (
   <div>
     <div className="search-form">
       <input 
+        aria-label="Search categories"
         type="search"
         className="search-form__input"
         placeholder="Search Categories"
         autoComplete="off"
         onChange={searchChange}
       />
-      <button className="search-form__button">
+      <button 
+        aria-label="Search categories"
+        className="search-form__button"
+      >
         <i className="fas fa-search"></i>
       </button>
     </div>

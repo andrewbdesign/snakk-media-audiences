@@ -6,4 +6,4 @@ import 'normalize.css/normalize.css'
 import './styles/app.scss';
 
 ReactDOM.render(<AudienceApp />, document.getElementById('root'));
-serviceWorker.unregister();
+serviceWorker.register();
