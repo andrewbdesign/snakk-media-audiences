@@ -1,0 +1,12 @@
+.header {
+    text-align: center;
+    background: $gradient;
+    padding: $m-size;
+    img {
+        width: 170px;
+    }
+    a {
+        color: $off-white;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,29 @@
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+}
+.category-el {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 1.2rem;
+  background: $off-white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 100ms ease-in;
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.15);
+  cursor: pointer;
+  p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.category-el:hover {
+  background: $brand-yellow;
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);
+}

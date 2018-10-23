@@ -1,0 +1,13 @@
+.search-form {
+    display: flex;
+    padding: $m-size 0;
+    font-size: $m-size;
+}
+
+.search-form__input {
+    border: none;
+    background: $off-white;
+    color: $black;
+    padding: $sm-size;
+    flex-grow: 1;
+}
