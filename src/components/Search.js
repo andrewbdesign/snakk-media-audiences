@@ -10,6 +10,9 @@ const Search = ({searchChange, inputValue}) => (
         autoComplete="off"
         onChange={searchChange}
       />
+      <button className="search-form__button">
+        <i className="fas fa-search"></i>
+      </button>
     </div>
     <div>
       {

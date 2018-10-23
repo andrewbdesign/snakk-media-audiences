@@ -11,3 +11,10 @@
     padding: $sm-size;
     flex-grow: 1;
 }
+
+.search-form__button {
+    background: #f79817;
+    color: #fff;
+    border: none;
+    pointer-events: none;
+}
