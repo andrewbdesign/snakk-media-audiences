@@ -24,6 +24,14 @@ for (let i = 0; i < categories.length; i++) {
 }
 console.log('categoryArrays', categoryArrays)
 
+const brands = []
+for (let i = 0; i < data.length; i++) {
+  const brand = data[i].BRAND
+  if(!brands.includes(brand)) {
+    brands.push(brand)
+  }
+}
+console.log('brands', brands)
 
 class Audiences extends Component {
   constructor(props) {
@@ -32,7 +40,8 @@ class Audiences extends Component {
       items: categories,
       inputValue: '',
       categoryArrays,
-      selectedCategory: ''
+      selectedCategory: '',
+      brands
     }
   }
 
@@ -57,7 +66,9 @@ class Audiences extends Component {
     })
 
     const categoryArray = data.filter(item => {
-      return item.CATEGORY.toLowerCase() === this.state.selectedCategory.toLowerCase()
+      return item.CATEGORY.toLowerCase() === this.state.selectedCategory.toLowerCase() 
+      // ||
+      //        item.BRAND.toLowerCase() === this.state.
     })
 
     return (
