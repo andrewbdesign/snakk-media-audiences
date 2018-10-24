@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Category = ({title, handlePick}) => (
+const Category = ({title = '', handlePick}) => (
   <div 
     data-id={title} 
     className="category-el"

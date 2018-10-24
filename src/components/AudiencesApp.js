@@ -22,7 +22,6 @@ for (let i = 0; i < categories.length; i++) {
   })
   categoryArrays.push(categoryArray)
 }
-// console.log('categoryArrays', categoryArrays)
 
 const brands = []
 for (let i = 0; i < data.length; i++) {
@@ -31,7 +30,6 @@ for (let i = 0; i < data.length; i++) {
     brands.push(brand)
   }
 }
-// console.log('brands', brands)
 
 class Audiences extends Component {
   constructor(props) {
@@ -61,15 +59,29 @@ class Audiences extends Component {
   }
 
   render() {
-    const filteredCategories = this.state.items.filter(item => {
-      return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
-    })
+    // const filteredCategories = this.state.items.filter(item => {
+    //   return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
+    // })
 
     const categoryArray = data.filter(item => {
       return item.CATEGORY.toLowerCase() === this.state.selectedCategory.toLowerCase() 
-      // ||
-      //        item.BRAND.toLowerCase() === this.state.
     })
+
+    const mapResults = data.filter(item => {
+      const searchParam = this.state.inputValue.toLowerCase()
+      if (item.BRAND.toLowerCase().includes(searchParam) || item.CATEGORY.toLowerCase().includes(searchParam)) {
+        return item.CATEGORY.toLowerCase()
+      } else {
+        return null
+      }
+    })
+
+    const filterResults = []
+    for (let i = 0; i < mapResults.length; i++) {
+      if (!filterResults.includes(mapResults[i].CATEGORY)) {
+        filterResults.push(mapResults[i].CATEGORY)
+      }
+    }
 
     return (
       <div>
@@ -82,7 +94,7 @@ class Audiences extends Component {
             inputValue={this.state.inputValue}
           />
           <Categories 
-            categories={filteredCategories}
+            categories={filterResults}
             handlePick={this.onPickHandle}
           />
           <CategoryModal 
