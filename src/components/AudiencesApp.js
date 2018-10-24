@@ -22,7 +22,7 @@ for (let i = 0; i < categories.length; i++) {
   })
   categoryArrays.push(categoryArray)
 }
-console.log('categoryArrays', categoryArrays)
+// console.log('categoryArrays', categoryArrays)
 
 const brands = []
 for (let i = 0; i < data.length; i++) {
@@ -31,7 +31,7 @@ for (let i = 0; i < data.length; i++) {
     brands.push(brand)
   }
 }
-console.log('brands', brands)
+// console.log('brands', brands)
 
 class Audiences extends Component {
   constructor(props) {
