@@ -10,6 +10,9 @@
     color: $black;
     padding: $sm-size;
     flex-grow: 1;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
 }
 
 .search-form__button {
