@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/snakk-media-audiences/static/js/runtime~main.4ff67542.js"
   },
   {
-    "revision": "7ad1a46c15696407c569",
-    "url": "/snakk-media-audiences/static/js/main.7ad1a46c.chunk.js"
+    "revision": "d37e1236d26895cd53e8",
+    "url": "/snakk-media-audiences/static/js/main.d37e1236.chunk.js"
   },
   {
     "revision": "a01c4770fbf3e24b1f8e",
     "url": "/snakk-media-audiences/static/js/1.a01c4770.chunk.js"
   },
   {
-    "revision": "7ad1a46c15696407c569",
-    "url": "/snakk-media-audiences/static/css/main.299d23ae.chunk.css"
+    "revision": "d37e1236d26895cd53e8",
+    "url": "/snakk-media-audiences/static/css/main.041c1a3b.chunk.css"
   },
   {
     "revision": "a01c4770fbf3e24b1f8e",
     "url": "/snakk-media-audiences/static/css/1.c569e928.chunk.css"
   },
   {
-    "revision": "c5169d719a5d413ea028f09e503a342d",
+    "revision": "f825873ad9b9343322d2079ee72bd0c4",
     "url": "/snakk-media-audiences/index.html"
   }
 ];
