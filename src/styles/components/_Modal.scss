@@ -11,7 +11,8 @@
 
 
 .ReactModal__Body--open {
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
 }
 .category-modal {
   background: $off-white;
@@ -20,12 +21,14 @@
   color: #000;
   outline: none;
   padding: $l-size;
-  position: relative;
+  padding-top: .5rem;
   max-height: 80vh;
   overflow: hidden;
   overflow-y: auto;
   h1 {
-    margin-bottom: $xl-size;
+    color: #000;
+    padding: 2rem 0;
+    font-size: 2rem;
   }
   button {
     width: 50px;
@@ -57,22 +60,23 @@ table {
 }
 
 thead tr {
-  background: #000;
-  color:#fff;
+  background: $brand-yellow;
+  // background: #fff;
+  color:#000;
 }
 
 tbody tr:nth-child(odd) {
-  background: #fff;
+  // background: #fff;
+  background: #eceaea
 }
 
 tbody tr {
   // cursor: pointer;
   &:hover {
-    // color: #fff;
-    background: $brand-yellow;
+    color: #000;
+    background: #fff;
   }
 }
-
 
 th {
   font-family: 'Open Sans', sans-serif;
