@@ -52,10 +52,12 @@ class Audiences extends Component {
   onPickHandle = (value) => {
     const selectedCategory = value.target.getAttribute('data-id')
     this.setState({ selectedCategory })
+    document.querySelector('body').classList.remove('modal-open')
   }
 
   onClearCategory = () => {
     this.setState({selectedCategory: ''})
+    document.querySelector('body').classList.add('modal-open')
   }
 
   render() {

@@ -14,11 +14,13 @@ const CategoryModal = ({selectedCategory, handleClose, categoryArray}) => {
         onRequestClose={handleClose}
         className="category-modal"
       > 
-        <h1>Category: {selectedCategory}</h1>
-        <CategoryTable categoryArray={categoryArray} />
-        <button onClick={handleClose}>
-          <span><i className="far fa-times-circle"></i></span>
-        </button>
+        <div className="category-modal__inner">
+          <h1>Category: {selectedCategory}</h1>
+          <CategoryTable categoryArray={categoryArray} />
+          <button onClick={handleClose}>
+            <span><i className="far fa-times-circle"></i></span>
+          </button>
+        </div>
 
       </Modal>
     </div>

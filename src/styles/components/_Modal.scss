@@ -9,13 +9,21 @@
   justify-content: center;
 }
 
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
 .category-modal {
   background: $off-white;
-  max-width: 96rem;
+  width: 130rem;
+  max-width: 90%;
   color: #000;
   outline: none;
   padding: $l-size;
   position: relative;
+  max-height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
   h1 {
     margin-bottom: $xl-size;
   }
@@ -27,10 +35,16 @@
     right: 0;
     border: 0;
     font-size: 30px;
-    background: $brand-yellow;
+    // background: $brand-yellow;
     i {
-      color: #fff;
-      // color: $brand-yellow;
+      color: $brand-yellow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      line-height: 1.5;
     }
   }
 }
@@ -38,6 +52,7 @@
 table {
   font-size: 1.4rem;
   width: 100%;
+  border-spacing: 0 1rem;
 }
 
 
@@ -51,7 +66,26 @@ td {
 }
 
 th, td {
-  // margin: 0 $sm-size;
-  // display: inline-block;
-  // padding: $m-size 0;
+  vertical-align: top;
+  padding: 1.5rem 1rem;
+}
+
+@media (max-width: 480px) {
+  .category-modal__inner {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  .category-modal {
+    h1 {
+      margin-bottom: 0.8rem;
+    }
+  }
+  table {
+    border-spacing: 0;
+    font-size: 1.2rem;
+  }
+  th, td {
+    padding: 1rem 0.4rem;
+  }
 }
