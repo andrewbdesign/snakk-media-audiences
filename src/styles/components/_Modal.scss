@@ -15,7 +15,7 @@
 }
 .category-modal {
   background: $off-white;
-  width: 130rem;
+  width: 110rem;
   max-width: 90%;
   color: #000;
   outline: none;
@@ -35,7 +35,8 @@
     right: 0;
     border: 0;
     font-size: 30px;
-    // background: $brand-yellow;
+    background: transparent;
+    cursor: pointer;
     i {
       color: $brand-yellow;
       position: absolute;
@@ -52,22 +53,41 @@
 table {
   font-size: 1.4rem;
   width: 100%;
-  border-spacing: 0 1rem;
+  border-spacing: 0;
+}
+
+thead tr {
+  background: #000;
+  color:#fff;
+}
+
+tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+tbody tr {
+  // cursor: pointer;
+  &:hover {
+    // color: #fff;
+    background: $brand-yellow;
+  }
 }
 
 
 th {
   font-family: 'Open Sans', sans-serif;
   text-align: left;
+  vertical-align: middle;
 }
 
 td {
   font-family: Roboto, sans-serif;
+  vertical-align: top;
 }
 
 th, td {
-  vertical-align: top;
   padding: 1.5rem 1rem;
+  line-height: 1.7;
 }
 
 @media (max-width: 480px) {
