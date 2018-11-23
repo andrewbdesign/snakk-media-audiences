@@ -37,10 +37,8 @@ class Audiences extends Component {
   constructor(props) {
     super(props)
     
-    // Elements
     this.head = null
 
-    // Store elements
     this.state = {
       items: categories,
       inputValue: '',
@@ -53,10 +51,8 @@ class Audiences extends Component {
   componentDidMount() {
     const tl = new TimelineMax()
     const head = this.head
-    tl.to(head, .5, {autoAlpha:0, ease:'Power1.easeOut'}, '3')
-    tl.to(head, .5, {autoAlpha:1, ease:'Power1.easeOut'}, '5')
-
-    // this.tl.to(head, 1, {autoAlpha:0, ease:'Power1.easeOut'}, '0')
+    tl.to(head, 1, {autoAlpha:0, ease:'Power1.easeOut'}, '3')
+    tl.to(head, 1, {autoAlpha:1, ease:'Power1.easeOut'}, '5')
   }
 
   onSearchHandle = (e) => {
@@ -77,29 +73,29 @@ class Audiences extends Component {
   }
 
   render() {
-    const filteredCategories = this.state.items.filter(item => {
-      return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
-    })
+    // const filteredCategories = this.state.items.filter(item => {
+    //   return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
+    // })
 
     const categoryArray = data.filter(item => {
       return item.CATEGORY.toLowerCase() === this.state.selectedCategory.toLowerCase() 
     })
 
-    // const mapResults = data.filter(item => {
-    //   const searchParam = this.state.inputValue.toLowerCase()
-    //   if (item.BRAND.toLowerCase().includes(searchParam) || item.CATEGORY.toLowerCase().includes(searchParam)) {
-    //     return item.CATEGORY.toLowerCase()
-    //   } else {
-    //     return null
-    //   }
-    // })
+    const mapResults = data.filter(item => {
+      const searchParam = this.state.inputValue.toLowerCase()
+      if (item.BRAND.toLowerCase().includes(searchParam) || item.CATEGORY.toLowerCase().includes(searchParam)) {
+        return item.CATEGORY.toLowerCase()
+      } else {
+        return null
+      }
+    })
 
-    // const filterResults = []
-    // for (let i = 0; i < mapResults.length; i++) {
-    //   if (!filterResults.includes(mapResults[i].CATEGORY)) {
-    //     filterResults.push(mapResults[i].CATEGORY)
-    //   }
-    // }
+    const filterResults = []
+    for (let i = 0; i < mapResults.length; i++) {
+      if (!filterResults.includes(mapResults[i].CATEGORY)) {
+        filterResults.push(mapResults[i].CATEGORY)
+      }
+    }
 
     return (
       <div>
@@ -112,7 +108,7 @@ class Audiences extends Component {
             inputValue={this.state.inputValue}
           />
           <Categories 
-            categories={filteredCategories}
+            categories={filterResults}
             handlePick={this.onPickHandle}
           />
           <CategoryModal 

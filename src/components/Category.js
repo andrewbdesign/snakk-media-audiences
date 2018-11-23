@@ -2,21 +2,15 @@ import React from 'react'
 
 const Category = ({title = '', handlePick}) => (
   <div 
-    id={
-      title.replace(/\s+/g, '-')
-           .replace(/&+/g, 'and')
-           .replace(/'/g, '')
-           .toLowerCase() } 
+    data-id={title} 
     className="category-el"
     onClick={handlePick}
     onMouseOver={ () => {
       console.log('yoooo')
     }}
   >
-    <p className={title.replace(/\s+/g, '-')
-           .replace(/&+/g, 'and')
-           .replace(/'/g, '')
-           .toLowerCase()}>
+    <p className={title.toLowerCase()
+           }>
       {title}
     </p>
   </div>
