@@ -5,6 +5,7 @@
   "homepage": "https://andrewbdesign.github.io/snakk-media-audiences",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "gsap": "^2.0.2",
     "node-sass": "^4.9.4",
     "normalize.css": "^8.0.0",
     "react": "^16.5.2",

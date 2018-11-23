@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { TimelineMax } from 'gsap/all'
 
 import Categories from './Categories'
 import CategoryModal from './CategoryModal'
@@ -32,8 +33,14 @@ for (let i = 0; i < data.length; i++) {
 }
 
 class Audiences extends Component {
+  
   constructor(props) {
     super(props)
+    
+    // Elements
+    this.head = null
+
+    // Store elements
     this.state = {
       items: categories,
       inputValue: '',
@@ -41,6 +48,15 @@ class Audiences extends Component {
       selectedCategory: '',
       brands
     }
+  }
+
+  componentDidMount() {
+    const tl = new TimelineMax()
+    const head = this.head
+    tl.to(head, .5, {autoAlpha:0, ease:'Power1.easeOut'}, '3')
+    tl.to(head, .5, {autoAlpha:1, ease:'Power1.easeOut'}, '5')
+
+    // this.tl.to(head, 1, {autoAlpha:0, ease:'Power1.easeOut'}, '0')
   }
 
   onSearchHandle = (e) => {
@@ -61,42 +77,42 @@ class Audiences extends Component {
   }
 
   render() {
-    // const filteredCategories = this.state.items.filter(item => {
-    //   return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
-    // })
+    const filteredCategories = this.state.items.filter(item => {
+      return item.toLowerCase().includes(this.state.inputValue.toLowerCase())
+    })
 
     const categoryArray = data.filter(item => {
       return item.CATEGORY.toLowerCase() === this.state.selectedCategory.toLowerCase() 
     })
 
-    const mapResults = data.filter(item => {
-      const searchParam = this.state.inputValue.toLowerCase()
-      if (item.BRAND.toLowerCase().includes(searchParam) || item.CATEGORY.toLowerCase().includes(searchParam)) {
-        return item.CATEGORY.toLowerCase()
-      } else {
-        return null
-      }
-    })
+    // const mapResults = data.filter(item => {
+    //   const searchParam = this.state.inputValue.toLowerCase()
+    //   if (item.BRAND.toLowerCase().includes(searchParam) || item.CATEGORY.toLowerCase().includes(searchParam)) {
+    //     return item.CATEGORY.toLowerCase()
+    //   } else {
+    //     return null
+    //   }
+    // })
 
-    const filterResults = []
-    for (let i = 0; i < mapResults.length; i++) {
-      if (!filterResults.includes(mapResults[i].CATEGORY)) {
-        filterResults.push(mapResults[i].CATEGORY)
-      }
-    }
+    // const filterResults = []
+    // for (let i = 0; i < mapResults.length; i++) {
+    //   if (!filterResults.includes(mapResults[i].CATEGORY)) {
+    //     filterResults.push(mapResults[i].CATEGORY)
+    //   }
+    // }
 
     return (
       <div>
         <Header />
         <div className="container">
-          <h1>SNAKK Audiences</h1>
+          <h1 ref={ h1 => this.head = h1 }>SNAKK Audiences</h1>
           <p>AUS Segment Taxonomy</p>
           <Search 
             searchChange={this.onSearchHandle} 
             inputValue={this.state.inputValue}
           />
           <Categories 
-            categories={filterResults}
+            categories={filteredCategories}
             handlePick={this.onPickHandle}
           />
           <CategoryModal 

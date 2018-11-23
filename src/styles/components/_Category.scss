@@ -40,14 +40,15 @@
 
 @media (min-width: 785px) {
   .category-el {
-    width: 21%;
+    width: 30%;
     height: 160px;
   }
 }
 
-@media (min-width: 960px) {
-  .category-el {
-    width: 155px;
-    height: 155px;
-  }
+// Category thumbnails
+
+.category-el {
+  // background-image: url('https://www.fillmurray.com/300/300');
+  background-position: center;
+  background-size: cover;
 }
